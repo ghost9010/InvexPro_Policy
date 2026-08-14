@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Privacy Policy — InvexPro</title>
+  <meta name="description" content="Official Privacy Policy for InvexPro - Stock Management Software. Offline-first, secure, private inventory and invoicing.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #0F172A;
+      --ink-soft: #334155;
+      --ink-muted: #64748B;
+      --paper: #FFFFFF;
+      --bg: #F8FAFC;
+      --surface: #FFFFFF;
+      --border: #E2E8F0;
+      --border-subtle: #F1F5F9;
+      --primary: #0F172A;
+      --accent-green: #059669;
+      --accent-green-bg: #ECFDF5;
+      --accent-green-border: #A7F3D0;
+      --accent-blue: #2563EB;
+      --accent-blue-bg: #EFF6FF;
+      --accent-blue-border: #BFDBFE;
+      --radius-lg: 16px;
+      --radius-md: 12px;
+      --radius-sm: 8px;
+      --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.03);
+      --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.04);
+      --shadow-md: 0 8px 24px rgba(15, 23, 42, 0.06);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--ink-soft);
+      line-height: 1.7;
+      font-size: 15px;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      word-break: break-word;
+    }
+
+    /* Reading Progress */
+    #progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: var(--ink);
+      width: 0%;
+      z-index: 1000;
+    }
+
+    /* Minimal Top Navigation */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      width: 100%;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--ink);
+      font-weight: 800;
+      font-size: 16px;
+      letter-spacing: -0.3px;
+    }
+
+    .brand-icon {
+      width: 32px;
+      height: 32px;
+      background: var(--ink);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #FFFFFF;
+      font-family: 'DM Serif Display', serif;
+      font-size: 14px;
+      font-style: italic;
+      flex-shrink: 0;
+    }
+
+    .badge-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--accent-green-bg);
+      color: var(--accent-green);
+      border: 1px solid var(--accent-green-border);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+
+    .badge-status::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: var(--accent-green);
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    /* Hero Header */
+    .hero {
+      background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 40px 16px 36px;
+      text-align: center;
+    }
+
+    .hero-container {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      background: var(--bg);
+      color: var(--ink-muted);
+      border: 1px solid var(--border);
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(26px, 5.5vw, 44px);
+      font-weight: 400;
+      color: var(--ink);
+      line-height: 1.15;
+      letter-spacing: -0.5px;
+      margin-bottom: 14px;
+    }
+
+    .hero-subtitle {
+      font-size: 14.5px;
+      color: var(--ink-muted);
+      max-width: 580px;
+      margin: 0 auto 24px;
+      line-height: 1.6;
+    }
+
+    .meta-pills {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .pill {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 5px 12px;
+      font-size: 11.5px;
+      color: var(--ink-soft);
+      font-weight: 500;
+    }
+
+    .pill strong {
+      color: var(--ink);
+    }
+
+    /* Mobile Quick Navigation Chips */
+    .quick-nav-bar {
+      display: none;
+      overflow-x: auto;
+      white-space: nowrap;
+      padding: 10px 16px;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .quick-nav-bar::-webkit-scrollbar {
+      display: none;
+    }
+    .quick-chip {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--ink-muted);
+      background: var(--bg);
+      border: 1px solid var(--border);
+      padding: 5px 12px;
+      border-radius: 16px;
+      text-decoration: none;
+      margin-right: 6px;
+      transition: all 0.15s;
+    }
+    .quick-chip:hover, .quick-chip.active {
+      background: var(--ink);
+      color: #FFFFFF;
+      border-color: var(--ink);
+    }
+
+    /* Main Layout */
+    .page-layout {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 32px 20px 60px;
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 36px;
+      align-items: start;
+    }
+
+    /* Sidebar (Desktop) */
+    .sidebar {
+      position: sticky;
+      top: 74px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 18px 16px;
+      box-shadow: var(--shadow-xs);
+      max-height: calc(100vh - 100px);
+      overflow-y: auto;
+    }
+
+    .sidebar-heading {
+      font-size: 10.5px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      margin-bottom: 10px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .toc-menu {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .toc-link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 10px;
+      border-radius: var(--radius-sm);
+      color: var(--ink-muted);
+      text-decoration: none;
+      font-size: 12.5px;
+      font-weight: 500;
+      line-height: 1.35;
+      transition: all 0.15s;
+    }
+
+    .toc-link:hover {
+      background: var(--bg);
+      color: var(--ink);
+    }
+
+    .toc-link.active {
+      background: #F1F5F9;
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    .toc-num {
+      font-size: 10.5px;
+      font-weight: 700;
+      opacity: 0.6;
+    }
+
+    /* Content Area */
+    .content-area {
+      min-width: 0;
+      width: 100%;
+    }
+
+    /* Key Cards */
+    .highlights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .highlight-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      box-shadow: var(--shadow-xs);
+    }
+
+    .highlight-icon {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .highlight-title {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+
+    .highlight-desc {
+      font-size: 12px;
+      color: var(--ink-muted);
+      line-height: 1.5;
+    }
+
+    /* Policy Sections */
+    .policy-section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 28px 24px;
+      margin-bottom: 20px;
+      box-shadow: var(--shadow-xs);
+      scroll-margin-top: 80px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 18px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .section-tag {
+      background: var(--ink);
+      color: #FFFFFF;
+      font-size: 10.5px;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: 6px;
+      flex-shrink: 0;
+    }
+
+    .section-header h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 21px;
+      font-weight: 400;
+      color: var(--ink);
+      letter-spacing: -0.2px;
+      line-height: 1.25;
+    }
+
+    .policy-section p {
+      color: var(--ink-soft);
+      font-size: 14.5px;
+      line-height: 1.75;
+      margin-bottom: 14px;
+    }
+
+    .policy-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .subheading {
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+      color: var(--ink);
+      margin: 20px 0 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .subheading::before {
+      content: '';
+      width: 8px;
+      height: 2px;
+      background: var(--ink);
+      display: inline-block;
+    }
+
+    /* Checklist */
+    .checklist {
+      list-style: none;
+      margin: 12px 0 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .checklist li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--ink-soft);
+      padding: 10px 12px;
+      background: var(--bg);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+    }
+
+    .check-icon {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: #E2E8F0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+
+    .check-icon svg {
+      width: 8px;
+      height: 8px;
+      stroke: #0F172A;
+      stroke-width: 2.5;
+      fill: none;
+    }
+
+    /* Callout */
+    .callout {
+      border-radius: var(--radius-sm);
+      padding: 16px 18px;
+      margin: 16px 0;
+      border-left: 3px solid var(--ink);
+      background: var(--bg);
+      border-top: 1px solid var(--border);
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .callout.callout-success {
+      border-left-color: var(--accent-green);
+      background: var(--accent-green-bg);
+      border-color: var(--accent-green-border);
+    }
+
+    .callout-title {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+
+    .callout-body {
+      font-size: 13.5px;
+      line-height: 1.6;
+      color: var(--ink-soft);
+    }
+
+    /* Responsive Data List / Table */
+    .data-summary-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin: 16px 0;
+    }
+
+    .data-item-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 14px 16px;
+    }
+
+    .data-item-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 6px;
+      flex-wrap: wrap;
+    }
+
+    .data-item-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 10.5px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .status-pill.no-collect {
+      background: #F1F5F9;
+      color: #475569;
+      border: 1px solid #CBD5E1;
+    }
+
+    .status-pill.local-only {
+      background: #EFF6FF;
+      color: #1D4ED8;
+      border: 1px solid #BFDBFE;
+    }
+
+    .data-item-desc {
+      font-size: 13px;
+      color: var(--ink-muted);
+      line-height: 1.5;
+    }
+
+    /* Key-Value Details Block */
+    .details-block {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 12px 16px;
+      margin: 16px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .details-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border-subtle);
+      font-size: 13.5px;
+    }
+
+    .details-row:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .details-label {
+      font-weight: 600;
+      color: var(--ink);
+      flex-shrink: 0;
+    }
+
+    .details-val {
+      color: var(--ink-soft);
+      text-align: right;
+      word-break: break-word;
+      overflow-wrap: anywhere;
+    }
+
+    .details-val a {
+      color: var(--accent-blue);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* Contact Links */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+      margin: 18px 0;
+    }
+
+    .contact-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 16px;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      transition: all 0.15s ease;
+    }
+
+    .contact-card:hover {
+      border-color: var(--ink);
+      background: var(--surface);
+    }
+
+    .cc-badge {
+      font-size: 18px;
+    }
+
+    .cc-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .cc-desc {
+      font-size: 12px;
+      color: var(--ink-muted);
+      line-height: 1.5;
+      flex-grow: 1;
+    }
+
+    .cc-action {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--accent-blue);
+      margin-top: 4px;
+      word-break: break-all;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 28px 16px;
+      text-align: center;
+    }
+
+    .footer-container {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--ink);
+    }
+
+    .footer-note {
+      font-size: 12.5px;
+      color: var(--ink-muted);
+    }
+
+    /* Mobile Responsive Optimizations */
+    @media (max-width: 860px) {
+      .quick-nav-bar {
+        display: block;
+        position: sticky;
+        top: 57px;
+        z-index: 90;
+      }
+
+      .page-layout {
+        grid-template-columns: 1fr;
+        padding: 20px 14px 48px;
+        gap: 18px;
+      }
+
+      .sidebar {
+        display: none;
+      }
+
+      .policy-section {
+        padding: 20px 16px;
+        border-radius: var(--radius-sm);
+        margin-bottom: 14px;
+      }
+
+      .hero {
+        padding: 32px 14px 28px;
+      }
+
+      .highlights-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .details-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+      }
+
+      .details-val {
+        text-align: left;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .navbar {
+        padding: 10px 14px;
+      }
+
+      .nav-brand span {
+        font-size: 15px;
+      }
+
+      .badge-status {
+        font-size: 10px;
+        padding: 3px 8px;
+      }
+
+      .hero h1 {
+        font-size: 24px;
+      }
+
+      .hero-subtitle {
+        font-size: 13.5px;
+      }
+
+      .policy-section p {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Reading Progress -->
+  <div id="progress-bar"></div>
+
+  <!-- Minimal Navbar -->
+  <header class="navbar">
+    <a class="nav-brand" href="#">
+      <div class="brand-icon">IP</div>
+      <span>InvexPro</span>
+    </a>
+    <span class="badge-status">Play Store Compliant</span>
+  </header>
+
+  <!-- Mobile Quick Jump Bar -->
+  <nav class="quick-nav-bar" aria-label="Mobile Section Navigation">
+    <a class="quick-chip" href="#overview">Overview</a>
+    <a class="quick-chip" href="#data-safety">Data Safety</a>
+    <a class="quick-chip" href="#info-collected">Permissions</a>
+    <a class="quick-chip" href="#no-third-party">No 3rd-Party</a>
+    <a class="quick-chip" href="#storage-security">Security</a>
+    <a class="quick-chip" href="#retention-deletion">Deletion</a>
+    <a class="quick-chip" href="#children">Children</a>
+    <a class="quick-chip" href="#contact">Contact</a>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-container">
+      <div class="hero-tag">Official Legal Document</div>
+      <h1>Privacy Policy for InvexPro</h1>
+      <p class="hero-subtitle">
+        InvexPro is an offline-first inventory and stock management application. Your records are stored locally on your device with complete encryption and zero cloud collection.
+      </p>
+      <div class="meta-pills">
+        <div class="pill">Effective: <strong>14 August 2026</strong></div>
+        <div class="pill">Last Updated: <strong>14 August 2026</strong></div>
+        <div class="pill">Developer: <strong>GHOST</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Body -->
+  <main class="page-layout">
+
+    <!-- Desktop Sticky Sidebar -->
+    <aside class="sidebar" aria-label="Table of Contents">
+      <div class="sidebar-heading">Contents</div>
+      <ul class="toc-menu">
+        <li><a class="toc-link" href="#overview"><span class="toc-num">01</span> Overview & Architecture</a></li>
+        <li><a class="toc-link" href="#data-safety"><span class="toc-num">02</span> Data Safety Declaration</a></li>
+        <li><a class="toc-link" href="#info-collected"><span class="toc-num">03</span> Information & Permissions</a></li>
+        <li><a class="toc-link" href="#how-we-use"><span class="toc-num">04</span> How Data Is Used</a></li>
+        <li><a class="toc-link" href="#no-third-party"><span class="toc-num">05</span> No Third-Party Services</a></li>
+        <li><a class="toc-link" href="#sharing"><span class="toc-num">06</span> Data Sharing & Disclosure</a></li>
+        <li><a class="toc-link" href="#storage-security"><span class="toc-num">07</span> Storage & Security</a></li>
+        <li><a class="toc-link" href="#retention-deletion"><span class="toc-num">08</span> Retention & Deletion</a></li>
+        <li><a class="toc-link" href="#backup-export"><span class="toc-num">09</span> Backup & Export</a></li>
+        <li><a class="toc-link" href="#children"><span class="toc-num">10</span> Children's Privacy</a></li>
+        <li><a class="toc-link" href="#rights"><span class="toc-num">11</span> User Rights & Controls</a></li>
+        <li><a class="toc-link" href="#updates"><span class="toc-num">12</span> Policy Updates</a></li>
+        <li><a class="toc-link" href="#contact"><span class="toc-num">13</span> Contact Information</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content Area -->
+    <div class="content-area">
+
+      <!-- Summary Highlights -->
+      <div class="highlights-grid">
+        <div class="highlight-card">
+          <div class="highlight-icon">🔒</div>
+          <div class="highlight-title">100% Local Storage</div>
+          <div class="highlight-desc">Inventory, customer, and transaction records remain strictly stored on your own device.</div>
+        </div>
+        <div class="highlight-card">
+          <div class="highlight-icon">🚫</div>
+          <div class="highlight-title">Zero Tracking or Ads</div>
+          <div class="highlight-desc">No advertising SDKs, no behavioral trackers, no user analytics, and no profiling.</div>
+        </div>
+        <div class="highlight-card">
+          <div class="highlight-icon">🛡️</div>
+          <div class="highlight-title">No Account Needed</div>
+          <div class="highlight-desc">No login, email sign-ups, or remote server authentication required to use the app.</div>
+        </div>
+      </div>
+
+      <!-- S1: Overview -->
+      <section class="policy-section" id="overview">
+        <div class="section-header">
+          <span class="section-tag">01</span>
+          <h2>Overview & Architecture</h2>
+        </div>
+        <p>
+          This Privacy Policy applies to <strong>InvexPro – Stock Management Software</strong> (referred to as the "Application", "App", or "Service"), published by <strong>GHOST</strong> ("Service Provider", "we", "us", or "our").
+        </p>
+        <p>
+          InvexPro is designed as an <strong>offline-first business productivity tool</strong>. Unlike cloud-dependent management apps, InvexPro does not transmit or synchronize your business records to external servers. All data belongs exclusively to you and remains within your device's secure local sandbox.
+        </p>
+      </section>
+
+      <!-- S2: Data Safety Declaration -->
+      <section class="policy-section" id="data-safety">
+        <div class="section-header">
+          <span class="section-tag">02</span>
+          <h2>Google Play Data Safety Declaration</h2>
+        </div>
+        <p>
+          In accordance with Google Play Developer Policies and Data Safety requirements:
+        </p>
+
+        <div class="data-summary-list">
+          <div class="data-item-card">
+            <div class="data-item-header">
+              <div class="data-item-title">Shop & Business Details</div>
+              <span class="status-pill no-collect">No Cloud Collection</span>
+            </div>
+            <div class="data-item-desc">Business name, contact details, address, and GSTIN are stored locally on your device only.</div>
+          </div>
+
+          <div class="data-item-card">
+            <div class="data-item-header">
+              <div class="data-item-title">Inventory & Financial Records</div>
+              <span class="status-pill no-collect">No Cloud Collection</span>
+            </div>
+            <div class="data-item-desc">Product catalogs, stock quantities, invoices, and sales transactions are encrypted on-device.</div>
+          </div>
+
+          <div class="data-item-card">
+            <div class="data-item-header">
+              <div class="data-item-title">Photos & Image Data</div>
+              <span class="status-pill local-only">Local Sandbox Only</span>
+            </div>
+            <div class="data-item-desc">Product images and business logos stay inside private app storage and are never uploaded.</div>
+          </div>
+
+          <div class="data-item-card">
+            <div class="data-item-header">
+              <div class="data-item-title">Location & Personal Identifiers</div>
+              <span class="status-pill no-collect">Not Requested</span>
+            </div>
+            <div class="data-item-desc">The App does not access GPS location, device serial numbers, or advertising IDs.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- S3: Information & Permissions -->
+      <section class="policy-section" id="info-collected">
+        <div class="section-header">
+          <span class="section-tag">03</span>
+          <h2>Information & Permissions</h2>
+        </div>
+
+        <div class="subheading">A. Data Handled Locally</div>
+        <p>The Application processes the following data entirely on your device:</p>
+        <ul class="checklist">
+          <li>
+            <span class="check-icon"><svg viewBox="0 0 10 10"><polyline points="2,5 4.5,7.5 8,2.5"/></svg></span>
+            <span><strong>Shop Profile:</strong> Shop name, owner name, phone number, address, and GST number.</span>
+          </li>
+          <li>
+            <span class="check-icon"><svg viewBox="0 0 10 10"><polyline points="2,5 4.5,7.5 8,2.5"/></svg></span>
+            <span><strong>Stock Catalog:</strong> Product names, barcodes, stock counts, categories, and purchase/sale pricing.</span>
+          </li>
+          <li>
+            <span class="check-icon"><svg viewBox="0 0 10 10"><polyline points="2,5 4.5,7.5 8,2.5"/></svg></span>
+            <span><strong>Billing & Sales:</strong> Sales transactions, payment modes, invoice histories, and GST calculations.</span>
+          </li>
+          <li>
+            <span class="check-icon"><svg viewBox="0 0 10 10"><polyline points="2,5 4.5,7.5 8,2.5"/></svg></span>
+            <span><strong>App Security PIN:</strong> Optional App Lock PIN stored as a cryptographic hash (never stored in plain text).</span>
+          </li>
+        </ul>
+
+        <div class="subheading">B. Device Permissions</div>
+        <ul class="checklist">
+          <li>
+            <span class="check-icon"><svg viewBox="0 0 10 10"><polyline points="2,5 4.5,7.5 8,2.5"/></svg></span>
+            <span><strong>Camera Permission (android.permission.CAMERA):</strong> Used strictly for real-time barcode scanning and capturing product photos. Camera frames are processed locally; no video or photo streams are uploaded or transmitted.</span>
+          </li>
+        </ul>
+        <p>You can grant or revoke this permission at any time through your device settings without affecting core offline stock management.</p>
+      </section>
+
+      <!-- S4: How Data Is Used -->
+      <section class="policy-section" id="how-we-use">
+        <div class="section-header">
+          <span class="section-tag">04</span>
+          <h2>How Your Information Is Used</h2>
+        </div>
+        <p>Because all data remains on your device, it is used strictly for local operations:</p>
+        <ul class="checklist">
+          <li>
+            <span class="check-icon"><svg viewBox="0 0 10 10"><polyline points="2,5 4.5,7.5 8,2.5"/></svg></span>
+            <span>Managing stock quantities, categories, and low-stock alerts.</span>
+          </li>
+          <li>
+            <span class="check-icon"><svg viewBox="0 0 10 10"><polyline points="2,5 4.5,7.5 8,2.5"/></svg></span>
+            <span>Generating GST invoices, sales summaries, and printable PDF documents.</span>
+          </li>
+          <li>
+            <span class="check-icon"><svg viewBox="0 0 10 10"><polyline points="2,5 4.5,7.5 8,2.5"/></svg></span>
+            <span>Creating encrypted backup files for offline data safety.</span>
+          </li>
+          <li>
+            <span class="check-icon"><svg viewBox="0 0 10 10"><polyline points="2,5 4.5,7.5 8,2.5"/></svg></span>
+            <span>Securing access through optional App Lock PIN authentication.</span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- S5: No Third-Party Services -->
+      <section class="policy-section" id="no-third-party">
+        <div class="section-header">
+          <span class="section-tag">05</span>
+          <h2>No Third-Party Tracking Services</h2>
+        </div>
+        <p>InvexPro does not integrate any third-party SDKs that collect or process user data:</p>
+        <ul class="checklist">
+          <li>
+            <span class="check-icon"><svg viewBox="0 0 10 10"><polyline points="2,5 4.5,7.5 8,2.5"/></svg></span>
+            <span><strong>No Ad Networks:</strong> No advertisements, banners, or ad trackers.</span>
+          </li>
+          <li>
+            <span class="check-icon"><svg viewBox="0 0 10 10"><polyline points="2,5 4.5,7.5 8,2.5"/></svg></span>
+            <span><strong>No Analytics SDKs:</strong> No screen tracking, analytics beacons, or telemetry collectors.</span>
+          </li>
+          <li>
+            <span class="check-icon"><svg viewBox="0 0 10 10"><polyline points="2,5 4.5,7.5 8,2.5"/></svg></span>
+            <span><strong>No Third-Party Logins:</strong> No social login tracking or third-party authentication services.</span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- S6: Data Sharing -->
+      <section class="policy-section" id="sharing">
+        <div class="section-header">
+          <span class="section-tag">06</span>
+          <h2>Data Sharing & Disclosure</h2>
+        </div>
+        <p>
+          We do not sell, rent, trade, or share your data with any third party.
+        </p>
+        <p>
+          Because all records are stored locally on your device, the Service Provider has no access to your database. Sharing occurs only when you choose to export or send a PDF invoice or backup file using your phone's apps (such as WhatsApp, Gmail, etc.).
+        </p>
+      </section>
+
+      <!-- S7: Storage & Security -->
+      <section class="policy-section" id="storage-security">
+        <div class="section-header">
+          <span class="section-tag">07</span>
+          <h2>Storage & Security Measures</h2>
+        </div>
+        <p>We implement industry-standard safeguards to protect data on your device:</p>
+        <ul class="checklist">
+          <li>
+            <span class="check-icon"><svg viewBox="0 0 10 10"><polyline points="2,5 4.5,7.5 8,2.5"/></svg></span>
+            <span><strong>Local Encryption:</strong> Database files are stored with AES-256 encryption within Android's sandboxed storage.</span>
+          </li>
+          <li>
+            <span class="check-icon"><svg viewBox="0 0 10 10"><polyline points="2,5 4.5,7.5 8,2.5"/></svg></span>
+            <span><strong>Encrypted Backups:</strong> Database exports use AES-256 encryption with optional password protection.</span>
+          </li>
+          <li>
+            <span class="check-icon"><svg viewBox="0 0 10 10"><polyline points="2,5 4.5,7.5 8,2.5"/></svg></span>
+            <span><strong>Secure Transport:</strong> Any routine network requests (such as version checks) use secure HTTPS connections exclusively.</span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- S8: Retention & Deletion -->
+      <section class="policy-section" id="retention-deletion">
+        <div class="section-header">
+          <span class="section-tag">08</span>
+          <h2>Data Retention & Deletion</h2>
+        </div>
+        <ul class="checklist">
+          <li>
+            <span class="check-icon"><svg viewBox="0 0 10 10"><polyline points="2,5 4.5,7.5 8,2.5"/></svg></span>
+            <span><strong>On-Device Control:</strong> Your data remains on your device as long as you choose to keep it.</span>
+          </li>
+          <li>
+            <span class="check-icon"><svg viewBox="0 0 10 10"><polyline points="2,5 4.5,7.5 8,2.5"/></svg></span>
+            <span><strong>Complete Deletion:</strong> You can permanently delete all records by clearing the app data in <em>Android Settings &gt; Apps &gt; InvexPro &gt; Storage &gt; Clear Storage</em>, or by uninstalling the application.</span>
+          </li>
+        </ul>
+        <div class="callout callout-success">
+          <div class="callout-title">Google Play Deletion Policy Compliance</div>
+          <div class="callout-body">
+            Because InvexPro does not maintain remote user databases or cloud servers, no server-side deletion request is required. Uninstalling the app permanently purges all records. For any inquiries, contact <strong>growwithghost980@gmail.com</strong>.
+          </div>
+        </div>
+      </section>
+
+      <!-- S9: Backup & Export -->
+      <section class="policy-section" id="backup-export">
+        <div class="section-header">
+          <span class="section-tag">09</span>
+          <h2>Backup & Export Controls</h2>
+        </div>
+        <p>InvexPro gives you full ownership over your data:</p>
+        <ul class="checklist">
+          <li>
+            <span class="check-icon"><svg viewBox="0 0 10 10"><polyline points="2,5 4.5,7.5 8,2.5"/></svg></span>
+            <span><strong>Export Encrypted Backups:</strong> Save a complete backup copy of your database to any private folder on your device.</span>
+          </li>
+          <li>
+            <span class="check-icon"><svg viewBox="0 0 10 10"><polyline points="2,5 4.5,7.5 8,2.5"/></svg></span>
+            <span><strong>PDF Export:</strong> Generate and share standard GST invoices and sales reports.</span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- S10: Children's Privacy -->
+      <section class="policy-section" id="children">
+        <div class="section-header">
+          <span class="section-tag">10</span>
+          <h2>Children's Privacy (COPPA & GDPR)</h2>
+        </div>
+        <p>
+          InvexPro is a commercial inventory management application intended for business owners and merchants. It is not directed at children under the age of 13. We do not knowingly collect personal data from minors.
+        </p>
+      </section>
+
+      <!-- S11: User Rights -->
+      <section class="policy-section" id="rights">
+        <div class="section-header">
+          <span class="section-tag">11</span>
+          <h2>User Rights & Controls</h2>
+        </div>
+        <p>
+          You have full rights to access, modify, export, or permanently erase your business records directly through the App at any time.
+        </p>
+      </section>
+
+      <!-- S12: Updates -->
+      <section class="policy-section" id="updates">
+        <div class="section-header">
+          <span class="section-tag">12</span>
+          <h2>Changes to This Policy</h2>
+        </div>
+        <p>
+          We may update this Privacy Policy periodically. Any revisions will be published on this webpage with a revised "Last Updated" date. Continued use of the Application indicates acceptance of the updated policy.
+        </p>
+      </section>
+
+      <!-- S13: Contact Information -->
+      <section class="policy-section" id="contact">
+        <div class="section-header">
+          <span class="section-tag">13</span>
+          <h2>Contact Information</h2>
+        </div>
+        <p>
+          For any questions or feedback regarding this Privacy Policy, please reach out through our official channels:
+        </p>
+
+        <div class="contact-grid">
+          <a class="contact-card" href="mailto:growwithghost980@gmail.com?subject=InvexPro%20Privacy%20Inquiry">
+            <div class="cc-badge">✉️</div>
+            <div class="cc-name">Email Support</div>
+            <div class="cc-desc">Direct email for privacy and data inquiries.</div>
+            <div class="cc-action">growwithghost980@gmail.com</div>
+          </a>
+
+          <a class="contact-card" href="https://forms.gle/fezSjd3oRvP1gn4MA" target="_blank" rel="noopener noreferrer">
+            <div class="cc-badge">💬</div>
+            <div class="cc-name">Feedback Form</div>
+            <div class="cc-desc">Submit suggestions or feature requests.</div>
+            <div class="cc-action">Open Feedback Form →</div>
+          </a>
+
+          <a class="contact-card" href="https://forms.gle/kQNhgTiA7bG1mNsE7" target="_blank" rel="noopener noreferrer">
+            <div class="cc-badge">🐛</div>
+            <div class="cc-name">Bug Report Form</div>
+            <div class="cc-desc">Report technical issues or glitches.</div>
+            <div class="cc-action">Open Bug Report →</div>
+          </a>
+        </div>
+
+        <div class="details-block">
+          <div class="details-row">
+            <span class="details-label">App Name</span>
+            <span class="details-val">InvexPro – Stock Management Software</span>
+          </div>
+          <div class="details-row">
+            <span class="details-label">Developer</span>
+            <span class="details-val">GHOST</span>
+          </div>
+          <div class="details-row">
+            <span class="details-label">Support Email</span>
+            <span class="details-val"><a href="mailto:growwithghost980@gmail.com">growwithghost980@gmail.com</a></span>
+          </div>
+          <div class="details-row">
+            <span class="details-label">Target Audience</span>
+            <span class="details-val">Small & Medium Businesses, Retailers, Distributors</span>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="brand-icon" style="width:24px;height:24px;font-size:11px;">IP</div>
+        <span>InvexPro</span>
+      </div>
+      <div class="footer-note">
+        © 2026 GHOST. All rights reserved. Built with privacy-first standards.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script for Smooth Interaction & Active TOC -->
+  <script>
+    // Reading Progress
+    window.addEventListener('scroll', () => {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
+      const progressBar = document.getElementById('progress-bar');
+      if (progressBar) {
+        progressBar.style.width = scrolled + '%';
+      }
+    });
+
+    // Active Navigation Highlighting on Scroll
+    const sections = document.querySelectorAll('.policy-section');
+    const navLinks = document.querySelectorAll('.toc-link');
+    const mobileChips = document.querySelectorAll('.quick-chip');
+
+    const observerOptions = {
+      root: null,
+      rootMargin: '-20% 0px -70% 0px',
+      threshold: 0
+    };
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const currentId = entry.target.getAttribute('id');
+          
+          // Desktop TOC
+          navLinks.forEach(link => {
+            if (link.getAttribute('href') === `#${currentId}`) {
+              link.classList.add('active');
+            } else {
+              link.classList.remove('active');
+            }
+          });
+
+          // Mobile Chips
+          mobileChips.forEach(chip => {
+            if (chip.getAttribute('href') === `#${currentId}`) {
+              chip.classList.add('active');
+              chip.scrollIntoView({ behavior: 'smooth', inline: 'nearest', block: 'nearest' });
+            } else {
+              chip.classList.remove('active');
+            }
+          });
+        }
+      });
+    }, observerOptions);
+
+    sections.forEach(section => {
+      sectionObserver.observe(section);
+    });
+  </script>
+</body>
+</html>
